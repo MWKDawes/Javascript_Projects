@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Project 9 | Countdown</title>
+        <link rel="stylesheet" href="CSS/main.css">                                                 <!--link to CSS-->
+        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda">      <!--Link to font used in slideshow-->
+    </head>
+
+    <body>
+        <p>How many seconds would you like to set your alarm for?</p>
+        <input id="seconds" value="" />                                 <!--input for amount of seconds-->
+        <button onclick="countdown()">Click here.</button>              <!--button to commence JS function-->
+        <p id="timer"></p>                                              <!--p element to be filled by JS function-->
+
+        <div class="slideshow-container">
+
+            <!--Slide 1-->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 18</div>
+                <img src="Images/Zelda1.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda (1)</div>
+            </div>
+
+            <!--Slide 2-->
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 18</div>
+                <img src="Images/Zelda2.jpg" style="width:100%">
+                <div class="text">Zelda II: The Adventure of Link</div>
+            </div>
+
+            <!--Slide 3-->
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 18</div>
+                <img src="Images/Zelda3.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: A Link to the Past</div>
+            </div>
+
+            <!--Slide 4-->
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 18</div>
+                <img src="Images/Zelda4.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Link's Awakening</div>
+            </div>
+
+            <!--Slide 5-->
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 18</div>
+                <img src="Images/Zelda5.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Ocarina of Time</div>
+            </div>
+
+            <!--Slide 6-->
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 18</div>
+                <img src="Images/Zelda6.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Majora's Mask</div>
+            </div>
+
+            <!--Slide 7-->
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 18</div>
+                <img src="Images/Zelda7.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Oracle's Seasons/Ages</div>
+            </div>
+
+            <!--Slide 8-->
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 18</div>
+                <img src="Images/Zelda8.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Four Swords Adventures</div>
+            </div>
+
+            <!--Slide 9-->
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 18</div>
+                <img src="Images/Zelda9.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: The Wind Waker</div>
+            </div>
+
+            <!--Slide 10-->
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 18</div>
+                <img src="Images/Zelda10.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: The Minish Cap</div>
+            </div>
+
+            <!--Slide 11-->
+            <div class="mySlides fade">
+                <div class="numbertext">11 / 18</div>
+                <img src="Images/Zelda11.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Twilight Princess</div>
+            </div>
+
+            <!--Slide 12-->
+            <div class="mySlides fade">
+                <div class="numbertext">12 / 18</div>
+                <img src="Images/Zelda12.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Phantom Hourglass</div>
+            </div>
+
+            <!--Slide 13-->
+            <div class="mySlides fade">
+                <div class="numbertext">13 / 18</div>
+                <img src="Images/Zelda13.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Spirit Tracks</div>
+            </div>
+
+            <!--Slide 14-->
+            <div class="mySlides fade">
+                <div class="numbertext">14 / 18</div>
+                <img src="Images/Zelda14.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Skyward Sword</div>
+            </div>
+
+            <!--Slide 15-->
+            <div class="mySlides fade">
+                <div class="numbertext">15 / 18</div>
+                <img src="Images/Zelda15.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: A Link Between Worlds</div>
+            </div>
+
+            <!--Slide 16-->
+            <div class="mySlides fade">
+                <div class="numbertext">16 / 18</div>
+                <img src="Images/Zelda16.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Tri-Force Heroes</div>
+            </div>
+
+            <!--Slide 17-->
+            <div class="mySlides fade">
+                <div class="numbertext">17 / 18</div>
+                <img src="Images/Zelda17.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Breath of the Wild</div>
+            </div>
+
+            <!--Slide 18-->
+            <div class="mySlides fade">
+                <div class="numbertext">18 / 18</div>
+                <img src="Images/Zelda18.jpg" style="width:100%">
+                <div class="text">The Legend of Zelda: Tears of the Kingdom</div>
+            </div>
+
+            <!--previous and next buttons-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!--dots for slideshow access-->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
+            <span class="dot" onclick="currentSlide(15)"></span>
+            <span class="dot" onclick="currentSlide(16)"></span>
+            <span class="dot" onclick="currentSlide(17)"></span>
+            <span class="dot" onclick="currentSlide(18)"></span>
+        </div>
+
+    <script src="JS/main.js"></script>      <!--link to pull JS file-->
+    </body>
+</html>
