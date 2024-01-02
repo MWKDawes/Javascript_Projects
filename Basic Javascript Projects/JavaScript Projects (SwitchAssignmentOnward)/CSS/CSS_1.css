@@ -1,0 +1,4 @@
+input[type=text] {
+    border: 3px solid blue;
+    border-bottom: 2px solid red;
+}
