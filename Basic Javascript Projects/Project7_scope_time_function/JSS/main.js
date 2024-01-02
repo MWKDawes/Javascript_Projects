@@ -29,5 +29,5 @@ function SayIt() {
     else {                                                                          /*stating else if they put the wrong answer...*/
         Answer = "WRONG!! HAVEN'T YOU BEEN PAYING ATTENTION!?";                     /*...verbally tear them down and tie that to Answer variable*/
     }
-    document.getElementById("SayIt").innerHTML = Answer;                            /*populate p element with SayIt id with Answer variable
+    document.getElementById("SayIt").innerHTML = Answer;                            /*populate p element with SayIt id with Answer variable*/
 }
